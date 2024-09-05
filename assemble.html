@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        form {
+            margin: auto;
+            width: 25%;
+            border: 1px solid white;
+            padding: 50px;
+            border-radius: 10px;
+            height: auto;    
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            outline: none;
+        }
+        h1 {
+            text-align: center;
+        }
+        div {
+            background-image: url(./form\ background.jpg);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            height: 700px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+        #submit {
+            background-color: green;
+            color: white;
+        }
+        h1, p {
+            color: black;
+        }
+    </style>
+    <div>
+
+        <form onsubmit="validateLogin(); return false;">
+            <h1>LOGIN</h1><br>
+            <input type="text" name="username" id="text" placeholder="enter username"><br><br>
+            <input type="password" name="password" id="password" placeholder="enter password"><br><br>
+            <input type="submit" name="submit" value="submit" id="submit"> 
+            <p>forget password? <a href="">Click</a></p>
+        </form>      
+    </div>
+     <script>
+        function validateLogin(){  
+            var username = "developer@gmail.com";
+            var password = "developer";
+                     
+            var name = document.getElementById("text").value;
+            var pass = document.getElementById("password").value;
+            
+            if(name == "" || pass == ""){
+                alert("Invalid username or password");
+            } 
+            else {
+                window.location.href = "https://new-world-x6ji.vercel.app/";
+
+            }
+        }
+</script>
+</body>
+</html>
